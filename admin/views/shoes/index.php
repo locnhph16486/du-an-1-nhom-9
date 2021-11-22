@@ -29,7 +29,7 @@
                     <td><?= $shoes['sale'] ?></td>
                     <td>
                         <a href="">Chi tiết</a>
-                        <a href="trademark-update?update-trademark=<?= $trademark['id'] ?>">Sửa</a> 
+                        <a href="shoes-update?update-shoes=<?= $shoes['id'] ?>">Sửa</a> 
                         <a onclick="return confirm('Bạn có muốn xóa <?php echo $shoes['name']?>')" href="shoes?delete-shoes=<?= $shoes['id'] ?>">Xóa</a>
                     </td>
                 </tr>

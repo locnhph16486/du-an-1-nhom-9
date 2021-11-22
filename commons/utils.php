@@ -31,13 +31,14 @@ function admin_render($view, $data = []){
     }
     include_once "./admin/views/layouts/main.php";
 }
-function admin_add($view,$done,$doneFile,$data = []){
+function admin_add($view,$done,$doneFile=null,$data = []){
     extract($data);
     $list_trademark=loadAll_shoes_brand();
     $view = './admin/views/' . $view;
     include_once "./admin/views/layouts/main.php";
 }
-function admin_update($view,$done){
+function admin_update($view,$done,$doneFile=null){
+    $list_trademark=loadAll_shoes_brand();
     $view = './admin/views/' . $view;
     include_once "./admin/views/layouts/main.php";
 }

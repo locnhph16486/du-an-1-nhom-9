@@ -33,6 +33,10 @@
             require_once './admin/business/shoes.php';
             shoes_add();
             break;
+        case 'shoes-update':
+            require_once './admin/business/shoes.php';
+            shoes_update();
+            break;
         default:
             # code...
             break;

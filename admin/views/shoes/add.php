@@ -103,13 +103,7 @@
             Ảnh Chính<br>
             <input type="file" name="image_main">
             <?php
-                if(isset($_POST['image_main'])){
-                    echo "NOOOOOOOOOOOO";
-                }
-                if(isset($ok)){
-                    echo $ok;
-                }
-                if(isset($doneFile)){
+                if($doneFile!=""){
                     echo $doneFile;
                 }
             ?>

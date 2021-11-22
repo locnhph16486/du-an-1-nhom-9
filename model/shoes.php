@@ -12,18 +12,22 @@
     }
     // Sửa danh mục
     function update_shoe($id,$id_brand,$name,$price,$image_main,$image_1,$image_2,$image_3,$painted,$favor,$sale){
-        if($image_main=""){
-            $sql="UPDATE shoe_brand set id_brand=$id_brand , name='$name' , price = '$price' ,image_1='$image_1',image_2='$image_2',image_3='$image_3',painted='$painted',favor='$favor',sale='$sale' where id=$id";
-        }else if($image_1=""){
-            $sql="UPDATE shoe_brand set id_brand=$id_brand , name='$name' , price = '$price' ,image_main = '$image_main',image_2='$image_2',image_3='$image_3',painted='$painted',favor='$favor',sale='$sale' where id=$id";
-        }else if($image_2=""){
-            $sql="UPDATE shoe_brand set id_brand=$id_brand , name='$name' , price = '$price' ,image_main = '$image_main',image_1='$image_1',image_3='$image_3',painted='$painted',favor='$favor',sale='$sale' where id=$id";
-        }
-        else if($image_3=""){
-            $sql="UPDATE shoe_brand set id_brand=$id_brand , name='$name' , price = '$price' ,image_main = '$image_main',image_1='$image_1',image_2='$image_2',painted='$painted',favor='$favor',sale='$sale' where id=$id";
-        }else{
-            $sql="UPDATE shoe_brand set id_brand=$id_brand , name='$name' , price = '$price' ,image_main = '$image_main',image_1='$image_1',image_2='$image_2',image_3='$image_3',painted='$painted',favor='$favor',sale='$sale' where id=$id";
-        }
+        // if($image_main=null){
+        //     $sql="UPDATE shoes set id_brand=$id_brand , name='$name' , price = '$price' ,image_1='$image_1',image_2='$image_2',image_3='$image_3',painted='$painted',favor='$favor',sale='$sale' where id=$id";
+        // }
+        // else if($image_1=""){
+        //     $sql="UPDATE shoes set id_brand=$id_brand , name='$name' , price = '$price' ,image_main = '$image_main',image_2='$image_2',image_3='$image_3',painted='$painted',favor='$favor',sale='$sale' where id=$id";
+        // }else if($image_2=""){
+        //     $sql="UPDATE shoes set id_brand=$id_brand , name='$name' , price = '$price' ,image_main = '$image_main',image_1='$image_1',image_3='$image_3',painted='$painted',favor='$favor',sale='$sale' where id=$id";
+        // }
+        // else if($image_3=""){
+        //     $sql="UPDATE shoes set id_brand=$id_brand , name='$name' , price = '$price' ,image_main = '$image_main',image_1='$image_1',image_2='$image_2',painted='$painted',favor='$favor',sale='$sale' where id=$id";
+        // }else if($image_main=""&&$image_1=""&&$image_2=""&&$image_3=""){
+        //     $sql="UPDATE shoes set id_brand=$id_brand , name='$name' , price = '$price',painted='$painted',favor='$favor',sale='$sale' where id=$id";
+        // }
+        // else{
+            $sql="UPDATE shoes set id_brand=$id_brand , name='$name' , price = '$price' ,image_main = '$image_main',image_1='$image_1',image_2='$image_2',image_3='$image_3',painted='$painted',favor='$favor',sale='$sale' where id=$id";
+        // }
         pdo_execute($sql);
     }
     // Xóa danh mục
